@@ -1,6 +1,6 @@
 cask "kegworks" do
-  version "2.0.3"
-  sha256 "bc30236554c7333f35fbff78b7eb849854b5c9521a917007cc9b4944421c5b6a"
+  version "2.0.4"
+  sha256 "626f9bf9e6c29493906e371a6f1eb72acecb21cef68516890eb98ef59e844160"
 
   url "https://github.com/Kegworks-App/Winery/releases/download/v#{version}/winery-v#{version}.tar.xz"
   name "Winery"
