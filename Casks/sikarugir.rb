@@ -1,19 +1,19 @@
-cask "kegworks" do
+cask "sikarugir" do
   version "2.0.4"
   sha256 "626f9bf9e6c29493906e371a6f1eb72acecb21cef68516890eb98ef59e844160"
 
-  url "https://github.com/Kegworks-App/Winery/releases/download/v#{version}/winery-v#{version}.tar.xz"
+  url "https://github.com/Sikarugir-App/Winery/releases/download/v#{version}/winery-v#{version}.tar.xz"
   name "Winery"
   desc "Porting tool, to make Windows programs/games into native apps"
-  homepage "https://github.com/Kegworks-App"
+  homepage "https://github.com/Sikarugir-App"
 
   depends_on macos: ">= :catalina"
 
-  app "Winery.app", target: "Kegworks Winery.app"
+  app "Winery.app", target: "Sikarugir Winery.app"
 
   postflight do
-    system "/usr/bin/xattr", "-drs", "com.apple.quarantine", "#{appdir}/Kegworks Winery.app"
-    system "/usr/bin/codesign", "--force", "--deep", "-s", "-", "#{appdir}/Kegworks Winery.app"
+    system "/usr/bin/xattr", "-drs", "com.apple.quarantine", "#{appdir}/Sikarugir Winery.app"
+    system "/usr/bin/codesign", "--force", "--deep", "-s", "-", "#{appdir}/Sikarugir Winery.app"
   end
 
   zap trash: [
