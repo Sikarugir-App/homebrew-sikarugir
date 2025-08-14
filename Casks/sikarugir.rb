@@ -1,6 +1,6 @@
 cask "sikarugir" do
   version "1.0"
-  sha256 "626f9bf9e6c29493906e371a6f1eb72acecb21cef68516890eb98ef59e844160"
+  sha256 "f98d737bf4d1b5274e4a74102b8995ab57fcbb408343cb5d631a09cc4d96cb0f"
 
   url "https://github.com/Sikarugir-App/Creator/releases/download/v#{version}/creator-v#{version}.tar.xz"
   name "Sikarugir Creator"
