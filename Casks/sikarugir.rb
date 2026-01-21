@@ -1,6 +1,6 @@
 cask "sikarugir" do
-  version "1.0"
-  sha256 "f98d737bf4d1b5274e4a74102b8995ab57fcbb408343cb5d631a09cc4d96cb0f"
+  version "1.0.1"
+  sha256 "4432471d21f935a1d0f6e0df01e8584e279a7f14ecd4e8b6ab52d41c0aad8122"
 
   url "https://github.com/Sikarugir-App/Creator/releases/download/v#{version}/Creator-v#{version}.tar.xz"
   name "Sikarugir Creator"
@@ -8,8 +8,6 @@ cask "sikarugir" do
   homepage "https://github.com/Sikarugir-App"
 
   depends_on macos: ">= :catalina"
-
-  app "Creator.app", target: "Sikarugir Creator.app"
 
   postflight do
     system "/usr/bin/xattr", "-drs", "com.apple.quarantine", "#{appdir}/Sikarugir Creator.app"
