@@ -17,9 +17,7 @@ cask "sikarugir" do
     system_command "/bin/mkdir", args: ["-p", "/Users/#{ENV.fetch("USER")}/Applications/Sikarugir"], sudo: false
   end
 
-  zap trash: [
-    "~/Library/Application Support/Sikarugir",
-  ]
+  zap trash: "~/Library/Application Support/Sikarugir"
 
   caveats do
     requires_rosetta
