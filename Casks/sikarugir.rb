@@ -9,6 +9,8 @@ cask "sikarugir" do
 
   depends_on macos: ">= :catalina"
 
+  app "Sikarugir Creator.app"
+
   postflight do
     system "/usr/bin/xattr", "-drs", "com.apple.quarantine", "#{appdir}/Sikarugir Creator.app"
     system "/usr/bin/codesign", "--force", "--deep", "-s", "-", "#{appdir}/Sikarugir Creator.app"
