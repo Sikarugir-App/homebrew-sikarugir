@@ -16,9 +16,7 @@ cask "sikarugir" do
     system "/usr/bin/codesign", "--force", "--deep", "-s", "-", "#{appdir}/Sikarugir Creator.app"
   end
 
-  zap trash: [
-    "~/Library/Application Support/Sikarugir",
-  ]
+  zap trash: "~/Library/Application Support/Sikarugir"
 
   caveats do
     requires_rosetta
