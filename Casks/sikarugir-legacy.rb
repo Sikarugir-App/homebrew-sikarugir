@@ -12,8 +12,8 @@ cask "sikarugir-legacy" do
   app "Creator.app", target: "Sikarugir Creator - Legacy.app"
 
   postflight do
-    system "/usr/bin/xattr", "-drs", "com.apple.quarantine", "#{appdir}/Sikarugir Creator- Legacy.app"
-    system "/usr/bin/codesign", "--force", "--deep", "-s", "-", "#{appdir}/Sikarugir Creator- Legacy.app"
+    system "/usr/bin/xattr", "-drs", "com.apple.quarantine", "#{appdir}/Sikarugir Creator - Legacy.app"
+    system "/usr/bin/codesign", "--force", "--deep", "-s", "-", "#{appdir}/Sikarugir Creator - Legacy.app"
     system_command "/bin/mkdir", args: ["-p", "/Users/#{ENV.fetch("USER")}/Applications/Sikarugir"], sudo: false
   end
 
