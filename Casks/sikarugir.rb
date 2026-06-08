@@ -7,7 +7,7 @@ cask "sikarugir" do
   desc "Porting tool, to make Windows programs/games into native apps"
   homepage "https://github.com/Sikarugir-App"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "Sikarugir Creator.app"
 
