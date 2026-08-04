@@ -22,7 +22,7 @@ cask "sikarugir" do
   caveats do
     requires_rosetta
     <<~EOS
-      If you found this software via http:\\sikarugir.com scan your system for malware
+      If you found this software via https:\\sikarugir.com scan your system for malware
       That site is not owned, ran nor affiliated with this project!
     EOS
   end
