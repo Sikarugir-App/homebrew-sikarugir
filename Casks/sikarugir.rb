@@ -11,10 +11,10 @@ cask "sikarugir" do
 
   app "Sikarugir Creator.app"
 
-  postflight do
-    system "/usr/bin/xattr", "-drs", "com.apple.quarantine", "#{appdir}/Sikarugir Creator.app"
-    system "/usr/bin/codesign", "--force", "--deep", "-s", "-", "#{appdir}/Sikarugir Creator.app"
-    system_command "/bin/mkdir", args: ["-p", "/Users/#{ENV.fetch("USER")}/Applications/Sikarugir"], sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-drs", "com.apple.quarantine", "{{appdir}}/Sikarugir Creator.app"]
+    run "/usr/bin/codesign", args: ["--force", "--deep", "-s", "-", "{{appdir}}/Sikarugir Creator.app"]
+    mkdir_p "/Users/{{user}}/Applications/Sikarugir"
   end
 
   zap trash: "~/Library/Application Support/Sikarugir"
